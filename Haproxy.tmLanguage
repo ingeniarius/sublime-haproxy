@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>haproxy.cfg</string>
+	</array>
+	<key>name</key>
+	<string>Haproxy</string>
+	<key>patterns</key>
+	<array>
+        <dict>
+            <key>match</key>
+            <string>\#.*</string>
+            <key>name</key>
+            <string>comment</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d{1,5}\b</string>
+            <key>name</key>
+            <string>constant.numeric</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\b^(global|defaults|frontend|listen|backend)\b</string>
+            <key>name</key>
+            <string>entity.name.function</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\b(acl|appsession|backlog|balance|bind|bind-process|block|capture\s+cookie|capture\s+request\s+header|capture\s+response\s+header|compression|cookie|default-server|default_backend|description|disabled|dispatch|enabled|errorfile|errorloc|errorloc302|errorloc303|force-persist|fullconn|grace|hash-type|http-check\s+disable-on-404|http-check\s+expect|http-check\s+send-state|http-request|id|ignore-persist|log-format|log|maxconn|mode|monitor\s+fail|monitor-net|monitor-uri|option\s+abortonclose|option\s+accept-invalid-http-request|option\s+accept-invalid-http-response|option\s+allbackups|option\s+checkcache|option\s+clitcpka|option\s+contstats|option\s+dontlog-normal|option\s+dontlognull|option\s+forceclose|option\s+forwardfor|option\s+http-no-delay|option\s+http-pretend-keepalive|option\s+http-server-close|option\s+http-use-proxy-header|option\s+httpchk|option\s+httpclose|option\s+httplog|option\s+http_proxy|option\s+independent-streams|option\s+ldap-check|option\s+log-health-checks|option\s+log-separate-errors|option\s+logasap|option\s+mysql-check|option\s+pgsql-check|option\s+nolinger|option\s+originalto|option\s+persist|option\s+redispatch|option\s+redis-check|option\s+smtpchk|option\s+socket-stats|option\s+splice-auto|option\s+splice-request|option\s+splice-response|option\s+srvtcpka|option\s+ssl-hello-chk|option\s+tcp-smart-accept|option\s+tcp-smart-connect|option\s+tcpka|option\s+tcplog|option\s+transparent|persist\s+rdp-cookie|rate-limit\s+sessions|redirect|reqadd|reqallow|reqdel|reqdeny|reqiallow|reqidel|reqideny|reqipass|reqirep|reqisetbe|reqitarpit|reqpass|reqrep|reqsetbe|reqtarpit|retries|rspadd|rspdel|rspdeny|rspidel|rspideny|rspirep|rsprep|server|source|stats\s+admin|stats\s+auth|stats\s+enable|stats\s+hide-version|stats\s+http-request|stats\s+realm|stats\s+refresh|stats\s+scope|stats\s+show-desc|stats\s+show-legends|stats\s+show-node|stats\s+uri|stick\s+match|stick\s+on|stick\s+store-request|stick\s+store-response|stick-table|tcp-request\s+connection|tcp-request\s+content|tcp-request\s+inspect-delay|tcp-response\s+content|tcp-response\s+inspect-delay|timeout\s+check|timeout\s+client|timeout\s+connect|timeout\s+http-keep-alive|timeout\s+http-request|timeout\s+queue|timeout\s+server|timeout\s+tarpit|timeout\s+tunnel|unique-id-format|unique-id-header|use_backend|use-server)\b</string>
+            <key>name</key>
+            <string>support.constant</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\b(\w+\d+)\b</string>
+            <key>name</key>
+            <string>string.unquoted</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\/[\w\.]+</string>
+            <key>name</key>
+            <string>string.other</string>
+        </dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.haproxy</string>
+	<key>uuid</key>
+	<string>4b8aa860-7a71-426a-9e6c-38faaff762bc</string>
+</dict>
+</plist>
